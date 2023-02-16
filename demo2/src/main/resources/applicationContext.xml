@@ -8,21 +8,21 @@
 <!--    <bean id="userService" class="com.example.demo2.Service.Impl.UserServiceImpl"></bean>-->
     <!--    2.注册bean时，不给id，通过beanName可获取-->
 <!--    <bean class="com.example.demo2.Service.Impl.UserServiceImpl"></bean>-->
-    <!--    3.注册bean时，可设定别名，通过别名可获取-->
+<!--        3.注册bean时，可设定别名，通过别名可获取-->
 <!--        <bean id="userService" name="wwww,123" class="com.example.demo2.Service.Impl.UserServiceImpl"></bean>-->
-    <!--    4.注册bean时，可设定单例或者原型，单例就是每次都是获取同一个bean，若是原型则每次都创建新的bean-->
+<!--        4.注册bean时，可设定单例或者原型，单例就是每次都是获取同一个bean，若是原型则每次都创建新的bean-->
 <!--    <bean id="userService" name="wwww,123" class="com.example.demo2.Service.Impl.UserServiceImpl" scope="prototype"></bean>-->
 <!--    <bean id="userService1" name="wwww1,1234" class="com.example.demo2.Service.Impl.UserServiceImpl" scope="singleton"-->
 <!--    init-method="init" destroy-method="destroy"></bean>-->
-    <!--    5.有参构造-->
+<!--    &lt;!&ndash;    5.有参构造&ndash;&gt;-->
 <!--    <bean id="userService"  name="wwww1,1234" class="com.example.demo2.Service.Impl.UserServiceImpl">-->
 <!--        <constructor-arg name="id" value="1"></constructor-arg>-->
 <!--    </bean>-->
-    <!--    6.静态工厂实例化-->
+<!--        6.静态工厂实例化-->
 <!--        <bean id="UserServiceBeanFactory"  name="wwww1,1234" class="com.example.demo2.UserServiceBeanFactory" factory-method="getUserService">-->
 <!--            <constructor-arg name="id" value="1"></constructor-arg>-->
 <!--        </bean>-->
-    <!--    7.非静态工厂实例化-->
+<!--        7.非静态工厂实例化-->
 <!--    <bean id="userServiceBeanFactory" class="com.example.demo2.UserServiceBeanFactory"></bean>-->
 <!--    <bean id="userService" name="wwww1,1234" factory-bean="userServiceBeanFactory" factory-method="getUserService1">-->
 <!--        <constructor-arg name="id" value="1"></constructor-arg>-->

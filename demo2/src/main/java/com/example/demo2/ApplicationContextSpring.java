@@ -14,9 +14,9 @@ public class ApplicationContextSpring {
 //        UserService userService = (UserService) cls.getBean("userService");
 //        UserService userService = (UserService) cls.getBean("com.example.demo2.Service.Impl.UserServiceImpl");
         UserService singleton = (UserService) cls.getBean("wwww1");
-//        UserService singleton1 = (UserService) cls.getBean("wwww1");
-//        UserService prototype = (UserService) cls.getBean("wwww");
-//        UserService prototype1 = (UserService) cls.getBean("wwww");
+        UserService singleton1 = (UserService) cls.getBean("wwww1");
+        UserService prototype = (UserService) cls.getBean("wwww");
+        UserService prototype1 = (UserService) cls.getBean("wwww");
         //使用bean
         System.out.println(singleton.getUser(1));
         ((ClassPathXmlApplicationContext) cls).close();

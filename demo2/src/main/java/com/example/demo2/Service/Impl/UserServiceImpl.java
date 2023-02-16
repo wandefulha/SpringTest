@@ -5,6 +5,7 @@ import com.example.demo2.Service.UserService;
 import com.example.demo2.domain.User;
 
 public class UserServiceImpl implements UserService {
+    public UserServiceImpl(){}
     public UserServiceImpl(Integer id){
         System.out.println(id);
     }
