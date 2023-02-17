@@ -5,9 +5,9 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd" >
 <!--    双向注入-->
     <bean id="adminService" name="wwww2,12345" class="com.example.demo2.Service.Impl.AdminServiceImpl" scope="singleton" lazy-init="true">
-        <property name="userService" value="userService"/>
+        <property name="userService" ref="userService"/>
     </bean>
     <bean id="userService" name="wwww1,1234" class="com.example.demo2.Service.Impl.UserServiceImpl" scope="singleton">
-        <property name="adminService" value="adminService"/>
+        <property name="adminService" ref="adminService"/>
     </bean>
 </beans>

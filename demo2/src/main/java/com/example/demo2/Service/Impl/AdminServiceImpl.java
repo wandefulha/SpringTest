@@ -11,6 +11,9 @@ public class AdminServiceImpl implements AdminService {
     public void setUserService(UserService userService){
         this.userService=userService;
     }
+    public UserService getUserService(){
+        return this.userService;
+    }
     public void setId(Integer id){
         this.id=id;
     }
