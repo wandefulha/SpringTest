@@ -5,17 +5,17 @@ import com.example.demo2.Service.AdminService;
 import com.example.demo2.Service.UserService;
 import com.example.demo2.domain.User;
 
-public class UserServiceImpl implements UserService {
-    private AdminService adminService;
+public class AdminServiceImpl implements AdminService {
+    private UserService userService;
     private Integer id;
-    public void setAdminService(AdminService adminService){
-        this.adminService=adminService;
+    public void setUserService(UserService userService){
+        this.userService=userService;
     }
     public void setId(Integer id){
         this.id=id;
     }
-    public UserServiceImpl(){}
-    public UserServiceImpl(Integer id){
+    public AdminServiceImpl(){}
+    public AdminServiceImpl(Integer id){
         System.out.println(id);
     }
     @Override

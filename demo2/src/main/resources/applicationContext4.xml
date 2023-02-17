@@ -3,9 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd" >
-<!--    注册处理器-->
-    <bean class="com.example.demo2.proessor.MyBeanPostProcessor"/>
+<!--    双向注入-->
+    <bean id="adminService" name="wwww2,12345" class="com.example.demo2.Service.Impl.AdminServiceImpl" scope="singleton" lazy-init="true">
+        <property name="userService" value="userService"/>
+    </bean>
     <bean id="userService" name="wwww1,1234" class="com.example.demo2.Service.Impl.UserServiceImpl" scope="singleton">
-        <property name="id" value="1"/>
+        <property name="adminService" value="adminService"/>
     </bean>
 </beans>
